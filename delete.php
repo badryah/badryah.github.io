@@ -8,11 +8,11 @@
 
 <body>
 <?php
-$conn = mysql_connect( "localhost", "root", "" );
-$db = mysql_select_db( "e_healthcare", $conn );
+$conn = mysqli_connect( "localhost", "root", "" );
+$db = mysqli_select_db( $conn, "healthcare");
 $query = "DELETE FROM pilgrims WHERE ID_P=".$_POST['ID_P']."";
-$result = mysql_query($query, $conn);
-mysql_close( $conn );
+$result = mysqli_query($conn, $query);
+mysqli_close( $conn );
 header("Location: http://localhost/E-healthcare/list.php");
 exit();
 ?>

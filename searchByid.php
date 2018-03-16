@@ -11,24 +11,24 @@
 
 <?php
 
-$conn = mysql_connect( "localhost", "root", "" );
-$db = mysql_select_db( "e_healthcare", $conn );
+$conn = mysqli_connect( "localhost", "root", "" );
+$db = mysqli_select_db( $conn,"healthcare");
 
 
     $searchID = $_POST['search']; 
     // gets value sent over search form
              
         $query = "SELECT * FROM pilgrims WHERE ID_P = '$searchID'";
-		$result = mysql_query($query, $conn);
+		$result = mysqli_query($conn, $query);
 		
        // if one or more rows are returned do following
-		if(mysql_num_rows($result) <= 0)
+		if(mysqli_num_rows($result) <= 0)
 		{
-			header("Location: http://localhost/E-healthcare/noresult.html");
+			header("Location: http://healthcare.app/noresult.html");
 			//echo "No Result, Please search again.";
 		} else {
 		
-            while ($row = mysql_fetch_array($result)){
+            while ($row = mysqli_fetch_array($result)){
 				$id= $row['ID_P'];
 				$fname=$row['F_name'];
 		     	$lname=$row['L_name'];
@@ -47,7 +47,7 @@ $db = mysql_select_db( "e_healthcare", $conn );
 		}
 
 
-//mysql_close( $conn );
+//mysqli_close( $conn );
 ?>
 <div id="id01">
   <form  class="modal-content" ><!--احط action للصفحة التالية للمعلومات الطبيه-->
@@ -72,8 +72,8 @@ $db = mysql_select_db( "e_healthcare", $conn );
 </table>
 <div class="clearfix"  >
         <button type="button" onclick="redirect()" class="cancelbtn">New Search</button>
-		<a href='deletaddform.php'>Delete</a>
-				      <a href='editaddform.php'>Edit</a> 
+		<a href=<?php echo 'deletaddform.php?ID_P='.$id;?>>Delete</a>
+				      <a href=<?php echo 'editaddform.php?ID_P='.$id;?>>Edit</a>
 		
       </div></div>
 	  </form></div>

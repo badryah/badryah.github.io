@@ -17,15 +17,15 @@ function redirect(){
 
 
 <?php
-$conn = mysql_connect("localhost", "root", "" );
-$db = mysql_select_db( "e_healthcare", $conn );
+$conn = mysqli_connect("localhost", "root", "" );
+$db = mysqli_select_db( $conn, "healthcare");
 
 $query = "Select * from pilgrims where ID_P = ".$_GET['ID_P'];
 //$ID_P = $_GET['ID_P'];
 //$query = "Select * from pilgrims where ID_P ='".$ID_P."'";
-$result = mysql_query($query, $conn );
+$result = mysqli_query($conn, $query);
 
-while ( $row = mysql_fetch_assoc( $result ))
+while ( $row = mysqli_fetch_assoc( $result ))
 {
 //$id = $row['id'];
 $ID_P = $row['ID_P'];
@@ -45,7 +45,7 @@ $Location_Camp = $row['Location_Camp'];
 
 		
 }
-mysql_close( $conn );
+mysqli_close( $conn );
 
 ?>
 <!-- 
