@@ -19,7 +19,7 @@ $db = mysql_select_db( $conn,"e_healthcare");
     // gets value sent over search form
              
         $query = "SELECT * FROM pilgrims WHERE ID_P = '$searchID'";
-		$result = mysql_query($conn, $query);
+		$result = mysql_query($query, $conn);
 		
        // if one or more rows are returned do following
 		if(mysql_num_rows($result) <= 0)
