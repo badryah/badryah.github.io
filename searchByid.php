@@ -11,24 +11,24 @@
 
 <?php
 
-$conn = mysqli_connect( "localhost", "root", "" );
-$db = mysqli_select_db( $conn,"e_healthcare");
+$conn = mysql_connect( "localhost", "root", "" );
+$db = mysql_select_db( $conn,"e_healthcare");
 
 
     $searchID = $_POST['search']; 
     // gets value sent over search form
              
         $query = "SELECT * FROM pilgrims WHERE ID_P = '$searchID'";
-		$result = mysqli_query($conn, $query);
+		$result = mysql_query($conn, $query);
 		
        // if one or more rows are returned do following
-		if(mysqli_num_rows($result) <= 0)
+		if(mysql_num_rows($result) <= 0)
 		{
 			header("Location: http:/localhost/E-healthcare/noresult.html");
 			//echo "No Result, Please search again.";
 		} else {
 		
-            while ($row = mysqli_fetch_array($result)){
+            while ($row = mysql_fetch_array($result)){
 				$id= $row['ID_P'];
 				$fname=$row['F_name'];
 		     	$lname=$row['L_name'];
@@ -47,7 +47,7 @@ $db = mysqli_select_db( $conn,"e_healthcare");
 		}
 
 
-//mysqli_close( $conn );
+//mysql_close( $conn );
 ?>
 <div id="id01">
   <form  class="modal-content" ><!--احط action للصفحة التالية للمعلومات الطبيه-->
