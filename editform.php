@@ -8,7 +8,7 @@
 <?php
 
 $conn = mysqli_connect("localhost", "root", "" );
-$db = mysqli_select_db( $conn, "healthcare");
+$db = mysqli_select_db( $conn, "e_healthcare");
 $query = "Update pilgrims SET F_name='".$_POST['F_name']."', L_name='".$_POST['L_name']."'
 
 , ID_P='".$_POST['ID_P']."', Date_of_birthday='".$_POST['Date_of_birthday']."', Gender='".$_POST['Gender']."', Nationality='".$_POST['Nationality']."'

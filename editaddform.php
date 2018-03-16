@@ -18,7 +18,7 @@ function redirect(){
 
 <?php
 $conn = mysqli_connect("localhost", "root", "" );
-$db = mysqli_select_db( $conn, "healthcare");
+$db = mysqli_select_db( $conn, "e_healthcare");
 //$ID_P = $_GET['ID_P'];
 //$searchID = $_GET['ID_P']; 
 $query = "Select * from pilgrims where ID_P = ".$_GET['ID_P'];

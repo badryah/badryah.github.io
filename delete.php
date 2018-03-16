@@ -9,7 +9,7 @@
 <body>
 <?php
 $conn = mysqli_connect( "localhost", "root", "" );
-$db = mysqli_select_db( $conn, "healthcare");
+$db = mysqli_select_db( $conn, "e_healthcare");
 $query = "DELETE FROM pilgrims WHERE ID_P=".$_POST['ID_P']."";
 $result = mysqli_query($conn, $query);
 mysqli_close( $conn );

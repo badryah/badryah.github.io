@@ -12,7 +12,7 @@
 <?php
 
 $conn = mysqli_connect( "localhost", "root", "" );
-$db = mysqli_select_db( $conn,"healthcare");
+$db = mysqli_select_db( $conn,"e_healthcare");
 
 
     $searchID = $_POST['search']; 
