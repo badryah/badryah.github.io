@@ -24,7 +24,7 @@ $db = mysqli_select_db( $conn,"healthcare");
        // if one or more rows are returned do following
 		if(mysqli_num_rows($result) <= 0)
 		{
-			header("Location: http:/localhost/E-healthcare//noresult.html");
+			header("Location: http:/localhost/E-healthcare/noresult.html");
 			//echo "No Result, Please search again.";
 		} else {
 		
