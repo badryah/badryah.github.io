@@ -105,37 +105,8 @@ mysql_close( $conn );
 	  
 </div>
 </form>
-<!--<table >
 
-<tr><td> First Name: </td><td><input type="text" name="F_name" size="70" value="<?php echo $F_name; ?> "></td></tr>
 
-<tr><td> Last Name: </td><td><input type="text" name="L_name" size="70" value="<?php echo $L_name; ?> "></td></tr>
-<tr><td> Birthday: </td><td><input type="date" name="Date_of_birthday" size="70" value="<?php echo $Date_of_birthday; ?> "></td></tr>
-
-<tr><td> Phone Number: </td><td><input type="number" name="Phone_number" size="70" value="<?php echo $Phone_number; ?> "></td></tr>
-
-<tr><td> ID: </td><td><input type="number" name="ID_P" size="70" value="<?php echo $ID_P; ?> "></td></tr>
-
-<tr><td> Gender: </td><td><input type="text" name="Gender" size="70" value="<?php echo $Gender; ?> "></td></tr>
-<tr><td> Nationality: </td><td><input type="text" name="Nationality" size="70" value="<?php echo $Nationality; ?> "></td></tr>
-
-<tr><td> Authorization: </td><td><input type="text" name="Authorization" size="70" value="<?php echo $Authorization; ?> "></td></tr>
-<tr><td> Type: </td><td><input type="text" name="Type" size="70" value="<?php echo $Type; ?> "></td></tr>
-<tr><td> Address: </td><td><input type="text" name="Address" size="70" value="<?php echo $Address; ?> "></td></tr>
-
-<tr><td> Record Number: </td><td><input type="text" name="Record_number" size="70" value="<?php echo $Record_number; ?> "></td></tr>
-<tr><td> Camp Number: </td><td><input type="text" name="Camp_Number" size="70" value="<?php echo $Camp_Number; ?> "></td></tr>
-
-<tr><td> Location Camp: </td><td><input type="text" name="Location_Camp" size="70" value="<?php echo $Location_Camp; ?> "></td></tr>
-
-<input type="hidden" name="id" size="5" value="<?php echo $id; ?>">
-</table>
-<p>
-<input type = "button" onclick="redirect()"  value= "Cancel">
-<input type = "submit"   value= "Confirm Delete">
-</div>
-</p>
-</form>-->
 </body>
 </html>
   
